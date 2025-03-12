@@ -10,13 +10,11 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
     <link rel="stylesheet" href="css/style.css">
-    <!-- Adicionando fonte sofisticada do Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Raleway:wght@300;400;600&display=swap" rel="stylesheet">
 </head>
 <body>
-    <!-- Header com navegação -->
     <header class="header-main">
         <div class="container py-3">
             <div class="row align-items-center">
@@ -51,8 +49,6 @@
             </div>
         </div>
     </header>
-
-    <!-- Seção Hero principal -->
     <section id="hero" class="hero-section py-5">
         <div class="container">
             <div class="row">
@@ -61,7 +57,7 @@
                         Transforme seu ambiente com pintura de alta qualidade
                     </h1>
                     <p class="lead mb-4 hero-subtitle">
-                        Profissionais especializados em pintura residencial e comercial, 
+                        Profissionais especializados em pintura residencial e comercial,
                         utilizando técnicas modernas e materiais premium para resultados excepcionais.
                     </p>
                     <div class="hero-brush-stroke"></div>
@@ -72,8 +68,6 @@
             </div>
         </div>
     </section>
-
-    <!-- Seção de Serviços -->
     <section id="servicos" class="services-section py-5">
         <div class="container">
             <h2 class="section-title text-center mb-5">Nossos Serviços</h2>
@@ -85,7 +79,7 @@
                         </div>
                         <h3 class="service-title">Pintura Interna</h3>
                         <p class="service-description">
-                            Sofisticação e durabilidade para ambientes internos com técnicas 
+                            Sofisticação e durabilidade para ambientes internos com técnicas
                             especiais e materiais de alta qualidade.
                         </p>
                     </div>
@@ -97,7 +91,7 @@
                         </div>
                         <h3 class="service-title">Pintura Externa</h3>
                         <p class="service-description">
-                            Proteção contra intempéries e valorização do imóvel com 
+                            Proteção contra intempéries e valorização do imóvel com
                             materiais resistentes e acabamento premium.
                         </p>
                     </div>
@@ -109,7 +103,7 @@
                         </div>
                         <h3 class="service-title">Efeitos Decorativos</h3>
                         <p class="service-description">
-                            Técnicas modernas para um acabamento diferenciado que 
+                            Técnicas modernas para um acabamento diferenciado que
                             valoriza e personaliza seu ambiente.
                         </p>
                     </div>
@@ -117,8 +111,6 @@
             </div>
         </div>
     </section>
-
-    <!-- Seção de Portfólio -->
     <section id="portfolio" class="portfolio-section py-5">
         <div class="container">
             <h2 class="section-title text-center mb-5">Nosso Portfólio</h2>
@@ -144,7 +136,7 @@
                         <span class="visually-hidden">Próximo</span>
                     </button>
                 </div>
-                <div class="portfolio-thumbnails mt-3 d-flex justify-content-center">
+                <div class="portfolio-thumbnails mt-3">
                     <img src="imagens/pintura1.jpg" class="thumbnail active" data-bs-slide-to="0" data-bs-target="#portfolioCarousel" alt="Miniatura 1">
                     <img src="imagens/pintura2.jpg" class="thumbnail" data-bs-slide-to="1" data-bs-target="#portfolioCarousel" alt="Miniatura 2">
                     <img src="imagens/pintura3.jpg" class="thumbnail" data-bs-slide-to="2" data-bs-target="#portfolioCarousel" alt="Miniatura 3">
@@ -152,8 +144,6 @@
             </div>
         </div>
     </section>
-
-    <!-- Modal para imagens expandidas -->
     <div class="modal fade" id="imagemModal" tabindex="-1" aria-hidden="true">
         <div class="modal-dialog modal-dialog-centered modal-lg">
             <div class="modal-content bg-transparent border-0">
@@ -170,15 +160,13 @@
             </div>
         </div>
     </div>
-
-    <!-- Seção de Orçamento -->
     <section id="orcamento" class="quote-section py-5">
         <div class="container">
             <div class="row">
                 <div class="col-lg-8 mx-auto text-center">
                     <h2 class="section-title mb-4">Solicitar Orçamento</h2>
                     <p class="mb-4">
-                        Entre em contato conosco para receber um orçamento gratuito e 
+                        Entre em contato conosco para receber um orçamento gratuito e
                         personalizado para o seu projeto de pintura.
                     </p>
                     <button class="btn btn-primary btn-lg" data-bs-toggle="modal" data-bs-target="#orcamentoModal">
@@ -188,8 +176,6 @@
             </div>
         </div>
     </section>
-
-    <!-- Modal de Orçamento -->
     <div class="modal fade" id="orcamentoModal" tabindex="-1" aria-labelledby="orcamentoModalLabel" aria-hidden="true">
         <div class="modal-dialog modal-dialog-centered">
             <div class="modal-content">
@@ -234,8 +220,6 @@
             </div>
         </div>
     </div>
-
-    <!-- Seção de Contato -->
     <section id="contato" class="contact-section py-5">
         <div class="container">
             <div class="row">
@@ -268,8 +252,6 @@
             </div>
         </div>
     </section>
-
-    <!-- Footer -->
     <footer class="footer-section py-4">
         <div class="container text-center">
             <div class="footer-logo mb-3">
@@ -291,67 +273,25 @@
             </p>
         </div>
     </footer>
-
-    <!-- Scripts -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="portifolio.js"></script>
     <script>
         document.addEventListener("DOMContentLoaded", function() {
-            // Atualizar o ano no copyright
             document.getElementById("currentYear").textContent = new Date().getFullYear();
-            
-        
-            // Navegação no modal
-            prevBtn.addEventListener("click", function() {
-                currentIndex = (currentIndex - 1 + imagesSrc.length) % imagesSrc.length;
-                expandedImage.src = imagesSrc[currentIndex];
-            });
-            
-            nextBtn.addEventListener("click", function() {
-                currentIndex = (currentIndex + 1) % imagesSrc.length;
-                expandedImage.src = imagesSrc[currentIndex];
-            });
-            
-            // Navegação com teclado quando o modal está aberto
-            document.addEventListener("keydown", function(event) {
-                if (document.getElementById("imagemModal").classList.contains("show")) {
-                    if (event.key === "ArrowLeft") {
-                        prevBtn.click();
-                    } else if (event.key === "ArrowRight") {
-                        nextBtn.click();
-                    } else if (event.key === "Escape") {
-                        imagemModal.hide();
-                    }
-                }
-            });
-            
-
-            
-            // Validação de formulário
             const form = document.getElementById("orcamentoForm");
             const whatsappInput = document.getElementById("whatsapp");
-            
-            // Máscara para WhatsApp
             whatsappInput.addEventListener("input", function(e) {
                 let value = e.target.value.replace(/\D/g, "");
                 if (value.length > 11) value = value.slice(0, 11);
-                
                 if (value.length > 2 && value.length <= 6) {
                     value = `(${value.slice(0, 2)}) ${value.slice(2)}`;
                 } else if (value.length > 6) {
                     value = `(${value.slice(0, 2)}) ${value.slice(2, 7)}-${value.slice(7)}`;
                 }
-                
                 e.target.value = value;
             });
-            
-            // Formulário de orçamento
             form.addEventListener("submit", function(e) {
                 e.preventDefault();
-                
-                // Aqui você adicionaria o código para enviar o formulário
-                // Por exemplo, usando fetch para enviar para um backend
-                
-                // Mostrar mensagem de sucesso
                 const modalBody = form.closest(".modal-body");
                 modalBody.innerHTML = `
                     <div class="text-center py-4">
@@ -360,47 +300,32 @@
                         <p>Entraremos em contato em breve.</p>
                     </div>
                 `;
-                
-                // Alterar botões do modal
                 const submitBtn = document.querySelector("#orcamentoModal .btn-primary");
                 submitBtn.style.display = "none";
-                
                 const closeBtn = document.querySelector("#orcamentoModal .btn-secondary");
                 closeBtn.textContent = "Fechar";
-                
-                // Resetar o formulário após alguns segundos
                 setTimeout(() => {
                     const modal = bootstrap.Modal.getInstance(document.getElementById("orcamentoModal"));
                     modal.hide();
-                    
-                    // Resetar o formulário quando o modal for fechado completamente
                     document.getElementById("orcamentoModal").addEventListener("hidden.bs.modal", function() {
                         form.reset();
                         modalBody.innerHTML = form.outerHTML;
                     }, { once: true });
                 }, 3000);
             });
-            
-            // Animar elementos ao rolar a página
             const animateOnScroll = function() {
                 const elements = document.querySelectorAll('.animate-on-scroll');
-                
                 elements.forEach(element => {
                     const elementPosition = element.getBoundingClientRect().top;
                     const windowHeight = window.innerHeight;
-                    
                     if (elementPosition < windowHeight - 100) {
                         element.classList.add('animated');
                     }
                 });
             };
-            
-            // Adicionar classe aos elementos que devem ser animados
             document.querySelectorAll('.service-card, .section-title, .hero-title, .hero-subtitle').forEach(el => {
                 el.classList.add('animate-on-scroll');
             });
-            
-            // Executar a função quando a página carrega e durante o scroll
             window.addEventListener('load', animateOnScroll);
             window.addEventListener('scroll', animateOnScroll);
         });
