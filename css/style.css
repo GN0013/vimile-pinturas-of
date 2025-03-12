@@ -1,0 +1,298 @@
+/* Estilos gerais */
+:root {
+    --primary-color: #2c3e50;
+    --secondary-color: #34495e;
+    --accent-color: #e67e22;
+    --light-color: #ecf0f1;
+    --dark-color: #1a252f;
+    --text-color: #333333;
+    --white: #ffffff;
+    --shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    --transition: all 0.3s ease;
+}
+
+body {
+    font-family: 'Raleway', sans-serif;
+    color: var(--text-color);
+    line-height: 1.6;
+    background-color: var(--light-color);
+    overflow-x: hidden;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Playfair Display', serif;
+    font-weight: 700;
+}
+
+a {
+    color: var(--accent-color);
+    text-decoration: none;
+    transition: var(--transition);
+}
+
+a:hover {
+    color: var(--primary-color);
+}
+
+section {
+    position: relative;
+    padding: 5rem 0;
+}
+
+.section-title {
+    position: relative;
+    margin-bottom: 3rem;
+    color: var(--primary-color);
+    font-size: 2.5rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.section-title::after {
+    content: "";
+    position: absolute;
+    bottom: -15px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80px;
+    height: 3px;
+    background-color: var(--accent-color);
+}
+
+/* Efeito de pincelada artística */
+.hero-brush-stroke {
+    position: relative;
+    height: 8px;
+    width: 150px;
+    background-color: var(--accent-color);
+    margin: 1.5rem auto;
+    border-radius: 3px;
+    transform: rotate(-1deg);
+}
+
+.hero-brush-stroke::before,
+.hero-brush-stroke::after {
+    content: "";
+    position: absolute;
+    height: 8px;
+    background-color: var(--accent-color);
+    border-radius: 3px;
+}
+
+.hero-brush-stroke::before {
+    width: 120px;
+    top: -16px;
+    left: 15px;
+    transform: rotate(2deg);
+}
+
+.hero-brush-stroke::after {
+    width: 170px;
+    bottom: -16px;
+    left: -10px;
+    transform: rotate(-1deg);
+}
+
+/* Header e navegação */
+.header-main {
+    background-color: var(--primary-color);
+    box-shadow: var(--shadow);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    padding: 0.5rem 0;
+}
+
+.logo {
+    max-height: 80px;
+    transition: var(--transition);
+}
+
+.navbar {
+    padding: 0;
+}
+
+.navbar-nav .nav-link {
+    color: var(--white);
+    font-weight: 500;
+    padding: 0.75rem 1.25rem;
+    margin: 0 0.25rem;
+    border-radius: 4px;
+    transition: var(--transition);
+    position: relative;
+}
+
+.navbar-nav .nav-link::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    width: 0;
+    height: 2px;
+    background-color: var(--accent-color);
+    transition: var(--transition);
+    transform: translateX(-50%);
+}
+
+.navbar-nav .nav-link:hover::after {
+    width: 70%;
+}
+
+.navbar-nav .nav-link:hover,
+.navbar-nav .nav-link:focus {
+    color: var(--accent-color);
+}
+
+.navbar-toggler {
+    border: none;
+    padding: 0.5rem;
+    color: var(--white);
+    background-color: var(--accent-color);
+}
+
+/* Seção Hero */
+.hero-section {
+    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('../imagens/pintura1.jpg');
+    background-size: cover;
+    background-position: center;
+    color: var(--white);
+    padding: 8rem 0;
+    position: relative;
+}
+
+.hero-title {
+    font-size: 3.5rem;
+    margin-bottom: 1.5rem;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.hero-subtitle {
+    font-size: 1.25rem;
+    max-width: 700px;
+    margin: 0 auto;
+    opacity: 0.9;
+}
+
+.hero-cta {
+    background-color: var(--accent-color);
+    border: none;
+    padding: 0.75rem 2rem;
+    border-radius: 50px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    box-shadow: 0 4px 15px rgba(230, 126, 34, 0.4);
+    transition: var(--transition);
+}
+
+.hero-cta:hover {
+    background-color: var(--white);
+    color: var(--accent-color);
+    transform: translateY(-3px);
+}
+
+/* Seção de Serviços */
+.services-section {
+    background-color: var(--white);
+}
+
+.service-card {
+    background-color: var(--white);
+    border-radius: 8px;
+    padding: 2.5rem 1.5rem;
+    height: 100%;
+    box-shadow: var(--shadow);
+    transition: var(--transition);
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.service-card::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 5px;
+    background-color: var(--accent-color);
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: var(--transition);
+}
+
+.service-card:hover {
+    transform: translateY(-10px);
+}
+
+.service-card:hover::before {
+    transform: scaleX(1);
+}
+
+.service-icon {
+    font-size: 2.5rem;
+    color: var(--accent-color);
+    margin-bottom: 1.5rem;
+    transition: var(--transition);
+}
+
+.service-card:hover .service-icon {
+    transform: scale(1.2);
+}
+
+.service-title {
+    color: var(--primary-color);
+    margin-bottom: 1rem;
+    font-size: 1.5rem;
+}
+
+.service-description {
+    color: var(--text-color);
+    font-size: 1rem;
+}
+
+/* Seção de Portfólio */
+.portfolio-section {
+    background-color: var(--secondary-color);
+    color: var(--white);
+}
+
+.portfolio-section .section-title {
+    color: var(--white);
+}
+
+.carousel-item img {
+    border-radius: 8px;
+    height: 60vh;
+    object-fit: cover;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.carousel-control-prev,
+.carousel-control-next {
+    width: 10%;
+    opacity: 0.8;
+}
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+    background-color: rgba(0, 0, 0, 0.5);
+    border-radius: 50%;
+    padding: 20px;
+}
+
+.portfolio-thumbnails {
+    display: flex;
+    justify-content: center;
+    gap: 10
+}
+.portfolio-section {
+    background-color: var(--secondary-color); /* Mantenha o fundo neutro */
+    position: relative;
+    overflow: hidden; /* Impede que as imagens vazem para fora */
+}
+
+.carousel-item img {
+    max-width: 50%;
+    height: auto;
+    object-fit: contain; /* Ajusta as imagens dentro dos limites */
+}
